@@ -29,7 +29,7 @@ class Account:
         """
         withdraw method takes the amount the person wants out of their account
         :param amount: is the amount of currency the person wants to take out of there account.
-        :return: boolean whether the withdraw was successful or not
+        :return: boolean whether the withdrawal was successful or not
         """
         if self.__account_balance < amount or amount <= 0:
             return False

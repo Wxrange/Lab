@@ -17,7 +17,7 @@ class Account:
         """
         The method deposit allows the person to add money to the persons account
         :param amount: The amount of money the person wants to deposit
-        :return: boolean if deposit was successful or not
+        :return: if deposit was successful it returns True or if not False
         """
         if amount <= 0:
             return False
@@ -25,11 +25,11 @@ class Account:
             self.__account_balance = self.__account_balance + amount
             return True
 
-    def withdraw(self, amount: float):
+    def withdraw(self, amount: float) -> bool:
         """
         withdraw method takes the amount the person wants out of their account
-        :param amount: is the amount of currency the person wants to take out of there account.
-        :return: boolean whether the withdrawal was successful or not
+        :param amount: is the amount of currency the person wants to take out of their account.
+        :return: withdrawal being successful returns True or if not then False
         """
         if self.__account_balance < amount or amount <= 0:
             return False
@@ -39,15 +39,15 @@ class Account:
 
     def get_balance(self) -> float:
         """
-        get_balance gives the current amount of balance the aaccount has
-        :return: the value of balance
+        get_balance gives the current amount of balance the account has
+        :return: returns value of balance for the acoount
         """
         return self.__account_balance
 
     def get_name(self) -> str:
         """
         get_name gets the name of the account holder
-        :return: string value the name given for the account
+        :return: returns the name given for the account
         """
         return self.__account_name
 
